@@ -5,7 +5,11 @@
     $pass = 'MYSQL_ROOT_PASSWORD';
     $database = 'MYSQL_DATABASE';
 
-    $conn = new mysqli($host, $user, $pass, $database);
+    $conn = mysqli_connect($host, $user, $pass, $database);
+
+    if(!$conn){
+        echo 'Connection error:' . mysqli_connect_error();
+    }
 
 ?>
 <!DOCTYPE html>
