@@ -28,6 +28,8 @@
     //fecha a conexão
     mysqli_close($conn);
 
+    explode(',', $pizzas[0]['ingredientes']);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,7 +45,11 @@
                     <div class="card z-depth-0">
                         <div class="card-content center">
                             <h6><?php echo htmlspecialchars($pizza['titulo']); ?></h6>
-                            <div><?php echo htmlspecialchars($pizza['ingredientes']) ?></div>
+                            <ul>
+                                <?php foreach(explode(',', $pizza['ingredientes']) as $ingrediente){ ?>
+                                    <li><?php echo htmlspecialchars($ingrediente); ?></li>
+                                <?php } ?>
+                            </ul>
                         </div>
                         <div class="card-action right-align">
                             <a class="brand-text" href="#">informações</a>
