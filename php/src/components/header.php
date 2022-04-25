@@ -11,10 +11,10 @@
 <body class="grey lighten-4">
     <nav class="white z-depth-0">
         <div class="container">
-            <a class="brand-logo brand-text" href="#">Pizza PHP</a>
+            <a class="brand-logo brand-text" href="../index.php">Pizza PHP</a>
             <ul class="right hide-on-small-and-down" id="nav-mobile">
                 <li>
-                    <a class="btn brand z-depth-0" href="#"><i class="material-icons left">local_pizza</i>Adicionar Pizza</a>
+                    <a class="btn brand z-depth-0" href="../pages/add.php"><i class="material-icons left">local_pizza</i>Adicionar Pizza</a>
                 </li>
             </ul>
         </div>

@@ -48,7 +48,7 @@
                             <ul>
                                 <?php foreach(explode(',', $pizza['ingredientes']) as $ingrediente): ?>
                                     <li><?php echo htmlspecialchars($ingrediente); ?></li>
-                                <?php endforeach ?>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                         <div class="card-action right-align">
@@ -56,7 +56,13 @@
                         </div>
                     </div>
                 </div>
-            <?php endforeach ?>
+            <?php endforeach; ?>
+
+            <?php if(count($pizzas) >= 3): ?>
+                <p> + de 3 pizzas</p>
+            <?php else: ?>
+                <p> - de 3 pizzas</p>
+            <?php endif; ?>
 
         </div>
     </div>
