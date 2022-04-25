@@ -41,17 +41,11 @@
                             </ul>
                         </div>
                         <div class="card-action right-align">
-                            <a class="brand-text" href="#">informações</a>
+                            <a class="brand-text" href="./pages/details.php?id=<?php echo $pizza['id']?>">informações</a>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
-
-            <?php if(count($pizzas) >= 3): ?>
-                <p> + de 3 pizzas</p>
-            <?php else: ?>
-                <p> - de 3 pizzas</p>
-            <?php endif; ?>
 
         </div>
     </div>

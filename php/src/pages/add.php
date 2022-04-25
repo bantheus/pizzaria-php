@@ -37,8 +37,22 @@
         if (array_filter($errors)) {
             //echo 'Erros no formulário';
         } else {
-            //echo 'Formulário validado';
-            header('Location: ../index.php');
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $title = mysqli_real_escape_string($conn, $_POST['title']);
+            $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
+
+            //create sql
+            $sql = "INSERT INTO pizzas(titulo, ingredientes, email) VALUES('$title', '$ingredients', '$email')";
+
+            //save to db and check
+            if(mysqli_query($conn, $sql)){
+                //success
+                header('Location: ../index.php');
+            } else {
+                //error
+                echo 'query error: ' . mysqli_error($conn);
+            }
+            
         }
 
     } //end if submit
