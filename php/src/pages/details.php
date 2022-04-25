@@ -34,6 +34,13 @@
             <p><?php echo date($pizza['criado_em']); ?></p>
             <h5>Ingredientes:</h5>
             <p><?php echo htmlspecialchars($pizza['ingredientes']); ?></p>
+
+            <!--- DELETE FORM --->
+            <form action="">
+                <input type="hidden" name="id_to_delete" value="<?php echo $pizza['id']; ?>">
+                <input class="btn brand z-depth-0" type="submit" name="delete" value="DELETE">
+            </form>
+
         <?php else: ?>
             <h5>Pizza não encontrada!</h5>
         <?php endif; ?>
