@@ -33,6 +33,7 @@
                 <div class="col s6 md3">
                     <div class="card z-depth-0">
                         <div class="card-content center">
+                        <img src="./assets/img/pizza.svg" class="pizza" alt="">
                             <h6><?php echo htmlspecialchars($pizza['titulo']); ?></h6>
                             <ul>
                                 <?php foreach(explode(',', $pizza['ingredientes']) as $ingrediente): ?>
